@@ -1,0 +1,30 @@
+main {
+
+}
+
+section {
+    max-width: 890px;
+    margin: 10px auto 10px auto;
+    background-color: lightsteelblue;
+    box-sizing: border-box;
+
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+}
+
+section h1 {
+    padding: 10px 10px 0px 10px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+section div {
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section div .video-container {
+
+}
