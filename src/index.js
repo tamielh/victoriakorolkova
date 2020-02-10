@@ -8,11 +8,6 @@ import Menu from "./Menu";
 import Content from "./Content";
 import Footer from "./Footer";
 
-const sectionsType = {
-    IMAGE: 'image',
-    VIDEO: 'video'
-}
-
 const properties = {
     title: "Victoria Korolkova",
     subTitle: "Je suis une super artiste",

@@ -23,7 +23,7 @@ class Gallery extends Component {
     renderImageContent(src, index) {
         return (
             <div key={index} onClick={(e) => this.openModal(e, index)}>
-                <img src={src} key={src} />
+                <img src={src} key={src} alt="" />
             </div>
         )
     }
@@ -31,13 +31,13 @@ class Gallery extends Component {
         this.setState ({ currentIndex: index });
     }
     closeModal(e) {
-        if (e != undefined) {
+        if (e !== undefined) {
             e.preventDefault();
         }
         this.setState ({ currentIndex: null });
     }
     findPrev(e) {
-        if (e != undefined) {
+        if (e !== undefined) {
             e.preventDefault();
         }
         this.setState(prevState => ({
@@ -45,7 +45,7 @@ class Gallery extends Component {
         }));
     }
     findNext(e) {
-        if (e != undefined) {
+        if (e !== undefined) {
             e.preventDefault();
         }
         this.setState(prevState => ({
