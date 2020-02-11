@@ -5,14 +5,22 @@ import './style/Content.css';
 class Content extends Component {
     renderImages(inputData) {
         return (
-            <Gallery inputData={inputData} />
+            <Gallery
+                inputData={inputData}
+                imagesId={[1,2,3,4,5,6,7,8,9,10,11,12]}
+            />
            )
     }
 
     renderVideo() {
         return (
             <div className="video-container">
-                <p>YOUTUBE</p>
+                <iframe src='https://www.youtube.com/embed/Rxr97xY3lJk'
+                        frameBorder='0'
+                        allow='autoplay; encrypted-media'
+                        allowFullScreen
+                        title='video'
+                />
             </div>
         );
     }

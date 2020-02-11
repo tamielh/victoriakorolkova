@@ -2,13 +2,9 @@ import React, {Component} from 'react';
 import './style/Gallery.css';
 import GalleryModal from "./GalleryModal";
 
-const imgUrls = ["http://localhost:3000/img/1.jpeg",
-    "http://localhost:3000/img/2.jpeg",
-    "http://localhost:3000/img/3.jpeg",
-    "http://localhost:3000/img/4.jpeg",
-    "http://localhost:3000/img/5.jpeg",
-    "http://localhost:3000/img/6.jpeg"
-]
+function getImageSrc(id) {
+    return "https://tamielh.github.io/victoriakorolkova/img/" + id + ".jpeg";
+}
 
 class Gallery extends Component {
     constructor(props) {
@@ -53,6 +49,8 @@ class Gallery extends Component {
         }));
     }
     render() {
+        const { imagesId } = this.props;
+        let imgUrls = imagesId.map(getImageSrc);
         return (
             <div className="gallery-container">
                 <div className="gallery-grid">
@@ -63,7 +61,7 @@ class Gallery extends Component {
                     findPrev={this.findPrev}
                     findNext={this.findNext}
                     hasPrev={this.state.currentIndex > 0}
-                    hasNext={this.state.currentIndex + 1 < imgUrls.length}
+                    hasNext={this.state.currentIndex + 1 < imgUrls.length}  /* TODO - Unsafe ! */
                     src={imgUrls[this.state.currentIndex]}
                 />
             </div>
