@@ -12,8 +12,22 @@ const properties = {
     title: "Victoria Korolkova",
     subTitle: "Je suis une super artiste",
     sectionsName: ["Mes réalisations", "Musée imaginaire", "Video", "Contact"],
+    /*sectionsName: [
+        {name: "Mes réalisations", type: "gallery"},
+        {name: "Musée imaginaire", type: "gallery"},
+        {name: "Vidéo", type: "video"},
+        {name: "Contact", type: "contact"},
+    ],*/
     footer: "Made by Thibaud Amielh, 2020",
 };
+
+const sections = [
+    {name: "Mes réalisations", type: "gallery"},
+    {name: "Musée imaginaire", type: "gallery"},
+    {name: "Vidéo", type: "video"},
+    {name: "Contact", type: "contact"},
+];
+
 
 class App extends Component {
     render() {
@@ -27,7 +41,7 @@ class App extends Component {
                     sectionsName={properties.sectionsName}
                 />
                 <Content
-                    sectionsNames={properties.sectionsName}
+                    sectionsNames={sections}
                     inputData={inputData}
                 />
                 <Footer

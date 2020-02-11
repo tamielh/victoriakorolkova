@@ -43,20 +43,20 @@ class Content extends Component {
         const sections = sectionsNames.map(sectionName => {
             let content;
 
-            switch (sectionName.toLowerCase()) {
+            switch (sectionName.type) {
                 case "video":
                     content = this.renderVideo();
                     break;
                 case "contact":
                     content = this.renderContact();
                     break;
-                default:
-                    content = this.renderImages(this.filterByCategory(inputData, sectionName.toLowerCase()));
+                case "gallery":
+                    content = this.renderImages(this.filterByCategory(inputData, sectionName.name.toLowerCase()));
             }
 
             return (
-                <section key={sectionName} id={sectionName}>
-                    <h1>{sectionName}</h1>
+                <section key={sectionName.name} id={sectionName.name}>
+                    <h1>{sectionName.name}</h1>
                     {content}
                 </section>
             )

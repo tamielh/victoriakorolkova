@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import './style/Gallery.css';
 import GalleryModal from "./GalleryModal";
 
+const siteUrl = "https://tamielh.github.io/victoriakorolkova/";
+
 function getImageSrc(id) {
-    return "https://tamielh.github.io/victoriakorolkova/img/" + id + ".jpeg";
+    return siteUrl + "img/" + id + ".jpeg";
 }
 
 class Gallery extends Component {

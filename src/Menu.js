@@ -3,9 +3,10 @@ import './style/Menu.css';
 
 class Menu extends Component {
     render() {
-        const menuItems = this.props.sectionsName.map(item => {
+        const { sectionsName } = this.props;
+        const menuItems = sectionsName.map(section => {
             return (
-                <li key={item}><a href={"#" + item}>{item}</a></li>
+                <li key={section}><a href={"#" + section}>{section}</a></li>
             )
         });
 
