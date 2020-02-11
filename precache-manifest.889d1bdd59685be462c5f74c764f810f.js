@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "742d0631d05485197a49d4e1d1febbe7",
+    "revision": "42e030fdaef2d3e1a5d7bf4aa43e0bb8",
     "url": "/victoriakorolkova/index.html"
   },
   {
-    "revision": "fe30ffd8c392164b9eae",
+    "revision": "0cba9e647fc5a2a30a26",
     "url": "/victoriakorolkova/static/css/main.c3b5bba5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/victoriakorolkova/static/js/2.cc71e8ef.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fe30ffd8c392164b9eae",
-    "url": "/victoriakorolkova/static/js/main.2b0c1cca.chunk.js"
+    "revision": "0cba9e647fc5a2a30a26",
+    "url": "/victoriakorolkova/static/js/main.4eaa237f.chunk.js"
   },
   {
     "revision": "54471d037bdb0efb7662",
