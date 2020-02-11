@@ -38,8 +38,7 @@ class Content extends Component {
     }
 
     render() {
-        const sectionsNames = this.props.sectionsName;
-        const inputData = this.props.inputData;
+        const { sectionsNames, inputData } = this.props;
 
         const sections = sectionsNames.map(sectionName => {
             let content;

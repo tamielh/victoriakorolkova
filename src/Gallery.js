@@ -49,7 +49,10 @@ class Gallery extends Component {
         }));
     }
     render() {
-        const { imagesId } = this.props;
+        const { inputData, imagesId } = this.props;
+        /*
+            Should be inputData : id, category, description (or legend), author, date
+        */
         let imgUrls = imagesId.map(getImageSrc);
         return (
             <div className="gallery-container">

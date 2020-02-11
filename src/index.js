@@ -27,7 +27,7 @@ class App extends Component {
                     sectionsName={properties.sectionsName}
                 />
                 <Content
-                    sectionsName={properties.sectionsName}
+                    sectionsNames={properties.sectionsName}
                     inputData={inputData}
                 />
                 <Footer
