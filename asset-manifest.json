@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/victoriakorolkova/static/css/main.947345fd.chunk.css",
+    "main.css": "/victoriakorolkova/static/css/main.6e6fcc8b.chunk.css",
     "main.js": "/victoriakorolkova/static/js/main.f90f2f23.chunk.js",
     "main.js.map": "/victoriakorolkova/static/js/main.f90f2f23.chunk.js.map",
     "runtime-main.js": "/victoriakorolkova/static/js/runtime-main.2305ec42.js",
@@ -8,15 +8,15 @@
     "static/js/2.cc71e8ef.chunk.js": "/victoriakorolkova/static/js/2.cc71e8ef.chunk.js",
     "static/js/2.cc71e8ef.chunk.js.map": "/victoriakorolkova/static/js/2.cc71e8ef.chunk.js.map",
     "index.html": "/victoriakorolkova/index.html",
-    "precache-manifest.61846b6340688f17c94fdc6f186c22d6.js": "/victoriakorolkova/precache-manifest.61846b6340688f17c94fdc6f186c22d6.js",
+    "precache-manifest.529bc16d5109112761f89848730ab292.js": "/victoriakorolkova/precache-manifest.529bc16d5109112761f89848730ab292.js",
     "service-worker.js": "/victoriakorolkova/service-worker.js",
-    "static/css/main.947345fd.chunk.css.map": "/victoriakorolkova/static/css/main.947345fd.chunk.css.map",
+    "static/css/main.6e6fcc8b.chunk.css.map": "/victoriakorolkova/static/css/main.6e6fcc8b.chunk.css.map",
     "static/js/2.cc71e8ef.chunk.js.LICENSE.txt": "/victoriakorolkova/static/js/2.cc71e8ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2305ec42.js",
     "static/js/2.cc71e8ef.chunk.js",
-    "static/css/main.947345fd.chunk.css",
+    "static/css/main.6e6fcc8b.chunk.css",
     "static/js/main.f90f2f23.chunk.js"
   ]
 }
