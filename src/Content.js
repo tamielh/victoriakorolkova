@@ -34,13 +34,15 @@ class Content extends Component {
     }
 
     filterByCategory(inputData, category) {
-        return inputData.filter(inputData => inputData.category === category);
+        const result = inputData.filter(inputData => inputData.category === category)
+        console.log(result);
+        return result;
     }
 
     render() {
-        const { sectionsNames, inputData } = this.props;
+        const { sections, inputData } = this.props;
 
-        const sections = sectionsNames.map(sectionName => {
+        const sectionsContent = sections.map(sectionName => {
             let content;
 
             switch (sectionName.type) {
@@ -64,7 +66,7 @@ class Content extends Component {
 
         return (
             <main>
-                {sections}
+                {sectionsContent}
             </main>
         )
     };

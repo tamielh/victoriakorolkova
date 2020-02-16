@@ -22,6 +22,7 @@ class Gallery extends Component {
         return (
             <div key={index} onClick={(e) => this.openModal(e, index)}>
                 <img src={src} key={src} alt="" />
+                <p>Hello world</p>
             </div>
         )
     }
