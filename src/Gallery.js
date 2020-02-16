@@ -23,7 +23,6 @@ class Gallery extends Component {
         return (
             <div key={index} onClick={(e) => this.openModal(e, index)}>
                 <img src={src} key={src} alt="" />
-                <p>{index}</p>
             </div>
         )
     }
@@ -54,7 +53,12 @@ class Gallery extends Component {
     }
     render() {
         const { inputData, imagesId } = this.props;
-        const imagesData = inputData.map(item => ({src: getImageSrc(item.image_name), description: item.description}));
+        const imagesData = inputData.map(item => ({
+                src: getImageSrc(item.image_name),
+                description: item.description,
+                author: item.author,
+                date: item.date
+        }));
 
         return (
             <div className="gallery-container">
@@ -67,7 +71,8 @@ class Gallery extends Component {
                     findNext={this.findNext}
                     hasPrev={this.state.currentIndex > 0}
                     hasNext={this.state.currentIndex + 1 < imagesData.length}  /* TODO - Unsafe ! */
-                    src={this.state.currentIndex !== null ? imagesData[this.state.currentIndex].src : null}
+                    imageData={this.state.currentIndex !== null ? imagesData[this.state.currentIndex] : null}
+
                 />
             </div>
         )

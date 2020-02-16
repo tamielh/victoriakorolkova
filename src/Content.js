@@ -34,10 +34,7 @@ class Content extends Component {
     }
 
     getDataByCategory(itemsData, category) {
-        const result = itemsData.filter(itemsData => category === itemsData.category);
-
-        console.log(result);
-        return result;
+        return itemsData.filter(itemsData => category === itemsData.category);
     }
 
     render() {

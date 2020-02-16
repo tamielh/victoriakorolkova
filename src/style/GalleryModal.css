@@ -15,7 +15,8 @@
     transform: translate(-50%,-50%);
     z-index: 2;
     max-width: 800px;
-    width: 80vh;
+    width: min-content;
+    background-color: white;
 }
 
 .modal-body img {
@@ -58,4 +59,19 @@
 }
 .modal-body {
     position: relative;
+}
+
+.modal-legend {
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-legend p {
+    margin: 0;
+}
+
+.author-date {
+    font-weight: bold;
 }

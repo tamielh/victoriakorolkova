@@ -24,13 +24,25 @@ class GalleryModal extends Component {
             this.props.findNext();
         }*/
     }
+    renderDescription(imageData) {
+        const author = imageData.author;
+        let date = imageData.date;
+        date = author ? " " + date : date;
+        const renderAuthorAndDate = author || date ? (<p className="author-date">{author}{date}&nbsp;</p>) : null;
+        return (
+            <div className="modal-legend">
+                {renderAuthorAndDate}
+                <p>{imageData.description}</p>
+            </div>
+        )
+    }
     render () {
-        const { closeModal, hasNext, hasPrev, findNext, findPrev, src } = this.props;
-        if (!src) {
+        const { closeModal, hasNext, hasPrev, findNext, findPrev, imageData } = this.props;
+        if (!imageData) {
             console.log('whut');
             return null;
         }
-        console.log("src: " + src);
+        //console.log("src: " + src);
         return (
             <div>
                 <div className="modal-overlay" onClick={closeModal}/>
@@ -39,8 +51,9 @@ class GalleryModal extends Component {
                         <a href="#" className='modal-close' onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a>
                         {hasPrev && <a href="#" className='modal-prev' onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
                         {hasNext && <a href="#" className='modal-next' onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
-                        <img src={src} alt={""} />
+                        <img src={imageData.src} alt={""} />
                     </div>
+                    {this.renderDescription(imageData)}
                 </div>
             </div>
         )
