@@ -30,6 +30,7 @@ class GalleryModal extends Component {
             console.log('whut');
             return null;
         }
+        console.log("src: " + src);
         return (
             <div>
                 <div className="modal-overlay" onClick={closeModal}/>

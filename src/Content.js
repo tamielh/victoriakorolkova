@@ -33,14 +33,15 @@ class Content extends Component {
         );
     }
 
-    filterByCategory(inputData, category) {
-        const result = inputData.filter(inputData => inputData.category === category)
+    getDataByCategory(itemsData, category) {
+        const result = itemsData.filter(itemsData => category === itemsData.category);
+
         console.log(result);
         return result;
     }
 
     render() {
-        const { sections, inputData } = this.props;
+        const { sections, inputData, itemsData } = this.props;
 
         const sectionsContent = sections.map(sectionName => {
             let content;
@@ -53,7 +54,7 @@ class Content extends Component {
                     content = this.renderContact();
                     break;
                 case "gallery":
-                    content = this.renderImages(this.filterByCategory(inputData, sectionName.name.toLowerCase()));
+                    content = this.renderImages(this.getDataByCategory(itemsData, sectionName.key));
             }
 
             return (

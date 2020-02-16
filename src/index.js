@@ -36,6 +36,10 @@ function getCategoriesName() {
     return array;
 }
 
+function getItemsData () {
+    return getInputData().map(line => line[1]);
+}
+
 class App extends Component {
     render() {
         const categoriesName = getCategoriesName();
@@ -52,6 +56,7 @@ class App extends Component {
                     properties={properties}
                     sections={sections}
                     inputData={inputData}
+                    itemsData={getItemsData()}
                 />
                 <Footer
                     footer={properties.footer}
