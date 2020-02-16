@@ -3,11 +3,12 @@ import Gallery from './Gallery';
 import './style/Content.css';
 
 class Content extends Component {
-    renderImages(inputData) {
+    renderImages(imagesData, hasNextSubCategory) {
+        console.log("index: " + hasNextSubCategory);
         return (
             <Gallery
-                inputData={inputData}
-                imagesId={[1,2,3,4,5,6,7,8,9,10,11,12]}
+                inputData={imagesData}
+                hasNextSubCategory={hasNextSubCategory}
             />
            )
     }
@@ -34,15 +35,14 @@ class Content extends Component {
     }
 
     getDataByCategory(itemsData, category) {
-        return itemsData.filter(itemsData => category === itemsData.category);
+        return itemsData.filter(itemsData => itemsData.category === category);
     }
 
     render() {
-        const { sections, inputData, itemsData } = this.props;
+        const { sections, imagesData } = this.props;
 
         const sectionsContent = sections.map(sectionName => {
             let content;
-
             switch (sectionName.type) {
                 case "video":
                     content = this.renderVideo();
@@ -51,7 +51,9 @@ class Content extends Component {
                     content = this.renderContact();
                     break;
                 case "gallery":
-                    content = this.renderImages(this.getDataByCategory(itemsData, sectionName.key));
+                    content = sectionName.key.map((key, index) =>
+                        this.renderImages(this.getDataByCategory(imagesData, key),
+                            index !== (sectionName.key.length - 1)));
             }
 
             return (

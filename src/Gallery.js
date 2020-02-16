@@ -52,7 +52,8 @@ class Gallery extends Component {
         }));
     }
     render() {
-        const { inputData, imagesId } = this.props;
+        const { inputData, hasNextSubCategory } = this.props;
+
         const imagesData = inputData.map(item => ({
                 src: getImageSrc(item.image_name),
                 description: item.description,
@@ -60,11 +61,14 @@ class Gallery extends Component {
                 date: item.date
         }));
 
+        const separator = hasNextSubCategory ? (<hr className="separator" />) : ("");
+
         return (
             <div className="gallery-container">
                 <div className="gallery-grid">
                     {imagesData.map((item, index) => this.renderImageContent(item.src, index, item.description))}
                 </div>
+                {separator}
                 <GalleryModal
                     closeModal={this.closeModal}
                     findPrev={this.findPrev}

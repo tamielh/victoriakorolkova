@@ -5,7 +5,7 @@ main {
 section {
     max-width: 890px;
     margin: 10px auto 10px auto;
-    background-color: #F3F1F4;
+    background-color: #f9f9f9;
     box-sizing: border-box;
 
     -moz-border-radius:7px;

@@ -17,32 +17,20 @@ const properties = {
 };
 
 const sections = [
-    {name: "Collages", type: "gallery", key: "collage"},
-    {name: "Croquis", type: "gallery", key: "croquis_t1"}, //TODO - ajouter les t2 et t3
-    {name: "Dessins", type: "gallery", key: "dessin"},
-    {name: "Musée imaginaire", type: "gallery", key: "museum"},
-    //{name: "Vidéo", type: "video"},
-    {name: "Contact", type: "contact", key: null}
+    {name: "Collages", type: "gallery", key: ["collage"]},
+    {name: "Croquis", type: "gallery", key: ["croquis_t1", "croquis_t2", "croquis_t3"]}, //TODO - ajouter les t2 et t3
+    {name: "Dessins", type: "gallery", key: ["dessin"]},
+    {name: "Musée imaginaire", type: "gallery", key: ["museum"]},
+    //{name: "Vidéo", type: ["video"]},
+    {name: "Contact", type: "contact", key: [null]}
 ];
 
-function getInputData() {
-    return Object.entries(inputData);
-}
-
-function getCategoriesName() {
-    let array = getInputData().map(line => line[1].category);
-    array.splice(0, array.length, ...(new Set(array)));
-    //console.log(array);
-    return array;
-}
-
-function getItemsData () {
-    return getInputData().map(line => line[1]);
+function getImagesData () {
+    return Object.entries(inputData).map(line => line[1]);
 }
 
 class App extends Component {
     render() {
-        const categoriesName = getCategoriesName();
         return (
             <div className="content-site">
                 <Header
@@ -50,13 +38,12 @@ class App extends Component {
                     subTitle={properties.subTitle}
                 />
                 <Menu
-                    sections={sections}
+                    sectionsName={sections.map(section => section.name)}
                 />
                 <Content
                     properties={properties}
                     sections={sections}
-                    inputData={inputData}
-                    itemsData={getItemsData()}
+                    imagesData={getImagesData()}
                 />
                 <Footer
                     footer={properties.footer}
