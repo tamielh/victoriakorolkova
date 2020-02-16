@@ -18,8 +18,8 @@ const properties = {
 
 const sections = [
     {name: "Collages", type: "gallery", key: ["collage"]},
-    {name: "Croquis", type: "gallery", key: ["croquis_t1", "croquis_t2", "croquis_t3"]}, //TODO - ajouter les t2 et t3
     {name: "Dessins", type: "gallery", key: ["dessin"]},
+    {name: "Croquis", type: "gallery", key: ["croquis_t1", "croquis_t2", "croquis_t3"]}, //TODO - ajouter les t2 et t3
     {name: "Musée imaginaire", type: "gallery", key: ["museum"]},
     //{name: "Vidéo", type: ["video"]},
     {name: "Contact", type: "contact", key: [null]}

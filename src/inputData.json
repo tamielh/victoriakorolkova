@@ -2,70 +2,70 @@
   {
     "image_name": "collage_1",
     "category": "collage",
-    "description": "La mère de forêt, 70 x 100 cm, \ncarton, les plantes sèches, la colle",
+    "description": "La mère de la forêt, 70 x 100 cm, \ncarton, plantes sèches, colle",
     "author": "",
     "date": "août 2019"
   },
   {
     "image_name": "collage_2",
     "category": "collage",
-    "description": "La composition, 70 x 100 cm, \ncarton, les plantes sèches, la colle",
+    "description": "Composition, 70 x 100 cm, \ncarton, plantes sèches, colle",
     "author": "",
     "date": "août 2019"
   },
   {
     "image_name": "collage_3",
     "category": "collage",
-    "description": "L'enrichissement visuel, 50 x 70 cm,\ncarton, le papier, la colee",
+    "description": "Enrichissement visuel, 50 x 70 cm,\ncarton, papier, colle",
     "author": "",
     "date": "mars 2019"
   },
   {
     "image_name": "collage_4",
     "category": "collage",
-    "description": "La composition des mains, A4,\nle papier, la colee",
+    "description": "Composition des mains, A4,\npapier, colle",
     "author": "",
     "date": "novembre 2019"
   },
   {
     "image_name": "collage_5",
     "category": "collage",
-    "description": "La composition des mains, A3, \nle papier, la colee",
+    "description": "Composition des mains, A3, \npapier, colle",
     "author": "",
     "date": "novembre 2019"
   },
   {
     "image_name": "dessin_1",
     "category": "dessin",
-    "description": "Nude, 70 x 90 cm, le papier, sanguine",
+    "description": "Nue, 70 x 90 cm, papier, sanguine",
     "author": "",
     "date": "mai 2017"
   },
   {
     "image_name": "dessin_2",
     "category": "dessin",
-    "description": "La femme avec la cruche, A0, \nle papier, sanguine",
+    "description": "Femme avec une cruche, A0, \npapier, sanguine",
     "author": "",
     "date": "septembre 2018"
   },
   {
     "image_name": "dessin_3",
     "category": "dessin",
-    "description": "Hercule dans la grotte, A0, le papier, aquarelle, pastel",
+    "description": "Hercule dans la grotte, A0, papier, aquarelle, pastel",
     "author": "",
     "date": "decembre 2018"
   },
   {
     "image_name": "dessin_4",
     "category": "dessin",
-    "description": "Souvenirs, 50 x 70 cm, le papier, pastel",
+    "description": "Souvenirs, 50 x 70 cm, papier, pastel",
     "author": "",
     "date": "mai 2018"
   },
   {
     "image_name": "dessin_5",
     "category": "dessin",
-    "description": "Nature mort, 40 x 50 cm, toile sur carton, acrylique",
+    "description": "Nature morte, 40 x 50 cm, toile sur carton, acrylique",
     "author": "",
     "date": "octobre 2016"
   },
@@ -310,35 +310,35 @@
   {
     "image_name": "museum_Klimt_1",
     "category": "museum",
-    "description": "Femal nude, le musée Albertina à Vienne",
+    "description": "Femme nue, musée d'Albertina à Vienne",
     "author": "Gustav Klimt",
     "date": ""
   },
   {
     "image_name": "museum_Fechine_1",
     "category": "museum",
-    "description": "Nue croquis, charbon, 58,5 x 40,9 cm. la collection privée, Moscou",
+    "description": "Nue croquis, charbon, 58,5 x 40,9 cm, collection privée, Moscou",
     "author": "Nicolai Fechine",
     "date": 1919
   },
   {
     "image_name": "museum_Fechine_2",
     "category": "museum",
-    "description": "Nue allongée, crayon, 43 x 68 cm, la collection privée, Volgograd?",
+    "description": "Nue allongée, crayon, 43 x 68 cm, collection privée, Volgograd (?)",
     "author": "Nicolai Fechine",
     "date": 1913
   },
   {
     "image_name": "museum_Fechine_3",
     "category": "museum",
-    "description": "Nue assise, charbon, 27 x 21,5 cm, la collection privée, Taos, USA",
+    "description": "Nue assise, charbon, 27 x 21,5 cm, collection privée, Taos, USA",
     "author": "Nicolai Fechine",
     "date": 1913
   },
   {
     "image_name": "museum_Michel_1",
     "category": "museum",
-    "description": "Jeune homme nu assis et études à deux bras, le musée Albertina à Vienne",
+    "description": "Jeune homme nu assis et études à deux bras, musée d'Albertina à Vienne",
     "author": "Michel-Ange",
     "date": "1510-11"
   }
