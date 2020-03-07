@@ -10,9 +10,9 @@ import Footer from "./Footer";
 
 const properties = {
     title: "Victoria Korolkova",
-    subTitle: "Je suis une super artiste",
+    subTitle: "",
     sectionsName: ["Mes réalisations", "Musée imaginaire", /*"Video",*/ "Contact"],
-    footer: "Made by Thibaud Amielh, 2020",
+    footer: "Thibaud Amielh, 2020",
     url: "vkorolkova.art"
 };
 

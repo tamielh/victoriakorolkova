@@ -1,15 +1,20 @@
 .gallery-grid {
     margin: 20px auto 20px auto;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .gallery-grid img {
     display: block;
-    max-width:135px;
-    height: auto;
+    height: 180px;
     width: auto;
     margin: 10px;
     border: white solid 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.gallery-grid img:hover {
+    opacity: 0.7;
 }
 
 .separator {

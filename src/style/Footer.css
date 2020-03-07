@@ -1,6 +1,7 @@
 footer {
     height: 100px;
     position: relative;
+    text-align: center;
 }
 
 footer p {
@@ -8,5 +9,6 @@ footer p {
     padding: 5px;
     margin: 0;
     bottom: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }

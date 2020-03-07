@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './style/GalleryModal.css';
 
+// https://reactjsexample.com/smoking-hot-image-gallery-made-with-react/
 class GalleryModal extends Component {
     constructor() {
         super();
