@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Gallery from './Gallery';
 import './style/Content.css';
 
-class Content extends Component {
-    renderImages(imagesData, hasNextSubCategory) {
-        console.log("index: " + hasNextSubCategory);
+class Content extends React.Component {
+    renderGallery(imagesData, hasNextSubCategory) {
         return (
             <Gallery
                 inputData={imagesData}
@@ -52,8 +51,10 @@ class Content extends Component {
                     break;
                 case "gallery":
                     content = sectionName.key.map((key, index) =>
-                        this.renderImages(this.getDataByCategory(imagesData, key),
-                            index !== (sectionName.key.length - 1)));
+                        this.renderGallery(
+                            this.getDataByCategory(imagesData, key),
+                            index !== (sectionName.key.length - 1)
+                        ));
             }
 
             return (

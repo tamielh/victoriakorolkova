@@ -19,14 +19,15 @@ const properties = {
 const sections = [
     {name: "Collages", type: "gallery", key: ["collage"]},
     {name: "Dessins", type: "gallery", key: ["dessin"]},
-    {name: "Croquis", type: "gallery", key: ["croquis_t1", "croquis_t2", "croquis_t3"]}, //TODO - ajouter les t2 et t3
+    {name: "Croquis", type: "gallery", key: ["croquis_t1", "croquis_t2", "croquis_t3"]},
     {name: "Musée imaginaire", type: "gallery", key: ["museum"]},
-    //{name: "Vidéo", type: ["video"]},
+    //{name: "Vidéo", type: ["video"]}, TODO on hold
     {name: "Contact", type: "contact", key: [null]}
 ];
 
 function getImagesData () {
-    return Object.entries(inputData).map(line => line[1]);
+    const imagesData = Object.entries(inputData).map(line => line[1]);
+    return imagesData.map((imageData, index) => ({ id: index, ...imageData }));
 }
 
 class App extends Component {

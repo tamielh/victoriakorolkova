@@ -1,29 +1,31 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './style/GalleryModal.css';
 
 // https://reactjsexample.com/smoking-hot-image-gallery-made-with-react/
-class GalleryModal extends Component {
+class GalleryModal extends React.Component {
+
     constructor() {
         super();
         this.handleKeyDown = this.handleKeyDown.bind(this);
     }
+
     componentDidMount() {
-        //document.body.addEventListener('keydown', this.handleKeyDown);
+        document.body.addEventListener('keydown', this.handleKeyDown);
     }
+
     componentWillUnmount() {
-        //document.body.removeEventListener('keydown', this.handleKeyDown);
+        document.body.removeEventListener('keydown', this.handleKeyDown);
     }
+
     handleKeyDown(e) {
-        /*if (e.keyCode === 27)
+        if (e.keyCode === 27)
             this.props.closeModal();
         if (e.keyCode === 37 && this.props.hasPrev) {
-            console.log("To the left");
             this.props.findPrev();
         }
         if (e.keyCode === 39 && this.props.hasNext) {
-            console.log("To the right");
             this.props.findNext();
-        }*/
+        }
     }
     renderDescription(imageData) {
         const author = imageData.author;
@@ -39,11 +41,9 @@ class GalleryModal extends Component {
     }
     render () {
         const { closeModal, hasNext, hasPrev, findNext, findPrev, imageData } = this.props;
-        if (!imageData) {
-            console.log('whut');
-            return null;
-        }
-        //console.log("src: " + src);
+
+        if (!imageData) return null;
+
         return (
             <div>
                 <div className="modal-overlay" onClick={closeModal}/>

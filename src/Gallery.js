@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './style/Gallery.css';
 import GalleryModal from "./GalleryModal";
 
@@ -8,7 +8,13 @@ function getImageSrc(id) {
     return siteUrl + "img/" + id + ".jpg";
 }
 
-class Gallery extends Component {
+function getImageDataById(imagesData, id) {
+    if(id === null) return null;
+    return imagesData[imagesData.findIndex(imageData => imageData.id === id)];
+}
+
+class Gallery extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {currentIndex: null};
@@ -16,18 +22,19 @@ class Gallery extends Component {
         this.findNext = this.findNext.bind(this);
         this.findPrev = this.findPrev.bind(this);
         this.renderImageContent = this.renderImageContent.bind(this);
-        /*this.inputData = this.props.inputData;*/
     }
-    renderImageContent(src, index, description) {
-        //console.log("index: " + index);
+
+    renderImageContent(src, id) {
         return (
-            <div key={index} onClick={(e) => this.openModal(e, index)}>
-                <img src={src} key={src} alt="" />
+            <div onClick={(e) => this.openModal(e, id)} key={id}>
+                <img src={src} key={id} alt="" />
             </div>
         )
     }
-    openModal(e, index) {
-        this.setState ({ currentIndex: index });
+    openModal(e, id) {
+        this.setState ({ currentIndex: id }, function () {
+            console.log("current index" + this.state.currentIndex);
+        });
     }
     closeModal(e) {
         if (e !== undefined) {
@@ -39,26 +46,28 @@ class Gallery extends Component {
         if (e !== undefined) {
             e.preventDefault();
         }
-        this.setState(prevState => ({
-            currentIndex: prevState.currentIndex - 1
-        }));
+        if(this.state.currentIndex != null) {
+            this.setState(prevState => ({
+                currentIndex: prevState.currentIndex - 1
+            }));
+        }
     }
     findNext(e) {
         if (e !== undefined) {
             e.preventDefault();
         }
-        this.setState(prevState => ({
-            currentIndex: prevState.currentIndex + 1
-        }));
+        if(this.state.currentIndex != null) {
+            this.setState(prevState => ({
+                currentIndex: prevState.currentIndex + 1
+            }));
+        }
     }
     render() {
         const { inputData, hasNextSubCategory } = this.props;
 
-        const imagesData = inputData.map(item => ({
-                src: getImageSrc(item.image_name),
-                description: item.description,
-                author: item.author,
-                date: item.date
+        const imagesData = inputData.map(imageData => ({
+                ...imageData,
+                src: getImageSrc(imageData.image_name)
         }));
 
         const separator = hasNextSubCategory ? (<hr className="separator" />) : ("");
@@ -66,17 +75,16 @@ class Gallery extends Component {
         return (
             <div className="gallery-container">
                 <div className="gallery-grid">
-                    {imagesData.map((item, index) => this.renderImageContent(item.src, index, item.description))}
+                    {imagesData.map(image => this.renderImageContent(image.src, image.id))}
                 </div>
                 {separator}
                 <GalleryModal
                     closeModal={this.closeModal}
                     findPrev={this.findPrev}
                     findNext={this.findNext}
-                    hasPrev={this.state.currentIndex > 0}
-                    hasNext={this.state.currentIndex + 1 < imagesData.length}  /* TODO - Unsafe ! */
-                    imageData={this.state.currentIndex !== null ? imagesData[this.state.currentIndex] : null}
-
+                    hasPrev={this.state.currentIndex > imagesData[0].id}
+                    hasNext={this.state.currentIndex + 1 < imagesData[imagesData.length - 1].id}
+                    imageData={getImageDataById(imagesData, this.state.currentIndex)}
                 />
             </div>
         )
